@@ -1,12 +1,12 @@
 package com.example.fcm;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -24,9 +24,10 @@ import java.util.Scanner;
 
 import static com.example.fcm.R.id.txt;
 
-public class MainActivity extends AppCompatActivity {
-	private static final String AUTH_KEY = "key=YOUR_SERVER_KEY";
-	private TextView mTextView;
+public class MainActivity extends Activity {
+	//private static final String AUTH_KEY = "key=AAAAa3txtWw:APA91bEnindepIGozP_vK2PNQmDMHr6Ji0HVlAZRCIGjGUSuI2aI60jTEWv5nhnHq-qzgBvS_pGk8Y-UO4YlIOsrMDZtnxHlj1COgkBoPSk5KW3kK0s8qg2o7U3Ssr0cDfLjYlFQBVhu";
+	private static final String AUTH_KEY = "key=AIzaSyAdty00BKdccCHFqeQE115TirC6Kw5C3m0";
+	private EditText mTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 			jNotification.put("click_action", "OPEN_ACTIVITY_1");
 			jNotification.put("icon", "ic_notification");
 
-			jData.put("picture", "http://opsbug.com/static/google-io.jpg");
+			jData.put("picture", "https://f88.vn/Files/Images/index/logo.png");
 
 			switch(type) {
 				case "tokens":

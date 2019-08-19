@@ -2,6 +2,8 @@ package com.example.fcm;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
@@ -10,14 +12,16 @@ public class SecondActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
 
-		TextView txt = findViewById(R.id.textView);
+		EditText txt = findViewById(R.id.textView);
 
 		Bundle bundle = getIntent().getExtras();
 		if (bundle != null) {
+			String s = "";
 			for (String key : bundle.keySet()) {
 				Object value = bundle.get(key);
-				txt.append(key + ": " + value + "\n\n");
+				s += key + ": " + value + "\n\n";
 			}
+			txt.setText(s);
 		}
 	}
 }

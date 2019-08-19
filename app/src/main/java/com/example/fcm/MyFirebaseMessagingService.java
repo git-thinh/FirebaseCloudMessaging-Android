@@ -19,6 +19,9 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 
@@ -39,6 +42,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 	private void sendNotification(RemoteMessage.Notification notification, Map<String, String> data) {
 		Bundle bundle = new Bundle();
+		bundle.putString("id", data.get("id"));
+		bundle.putString("title", data.get("title"));
+		bundle.putString("body", data.get("body"));
 		bundle.putString(FCM_PARAM, data.get(FCM_PARAM));
 
 		Intent intent = new Intent(this, SecondActivity.class);
@@ -60,6 +66,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 				.setDefaults(Notification.DEFAULT_VIBRATE)
 				.setNumber(++numMessages)
 				.setSmallIcon(R.drawable.ic_notification);
+
 
 		try {
 			String picture = data.get(FCM_PARAM);

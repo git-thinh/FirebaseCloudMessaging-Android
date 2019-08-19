@@ -11,9 +11,11 @@
 	android:paddingRight="@dimen/activity_horizontal_margin"
 	tools:context="com.example.fcm.SecondActivity">
 
-	<TextView
+	<EditText
 		android:id="@+id/textView"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
+		android:lines="18"
+		android:minLines="15"
 		android:layout_height="wrap_content"
 		android:layout_centerInParent="true"/>
 

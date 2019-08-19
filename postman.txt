@@ -1,0 +1,24 @@
+https://fcm.googleapis.com/fcm/send
+
+Content-Type: application/json
+Authorization: key=AIzaSyAdty00BKdccCHFqeQE115TirC6Kw5C3m0
+
+{
+	 "to" : "dGP-bNS_yBI:APA91bHWPP662_bGYYVuXICfQajCVCKoDMTywxGyAT_B34fWMm94GGabNAOtFOpBDuOIqo1jMprvds3M7UM9xUloeda6IUaimE3CjUIrFtfwA7SFPgqa3mDtrtjQPwyfo5z9ZL3cVSwz",
+	 "notification" : {
+	 	"id": "12345",
+		 "body" : "great match!",
+		 "title" : "Portugal vs. Denmark"
+		 "content_available" : true,
+		 "priority" : "high",
+		 "picture" : "https://f88.vn/Files/Images/index/logo.png"
+	 },
+	 "data" : {
+	 	"id": "12345",
+		 "body" : "great match!",
+		 "title" : "Portugal vs. Denmark"
+		 "content_available" : true,
+		 "priority" : "high",
+		 "picture" : "https://f88.vn/Files/Images/index/logo.png"
+	 } 
+}
